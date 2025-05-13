@@ -9,6 +9,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
 @RequestMapping("/api/v1/auth")
@@ -16,7 +17,8 @@ import org.springframework.web.bind.annotation.*;
 @Tag(name = "Authentication", description = "APIs de autenticação")
 public class AuthenticationController {
 
-    private final AuthenticationService authenticationService;
+    @Autowired
+    private AuthenticationService authenticationService;
 
     @PostMapping("/login")
     @Operation(summary = "Realiza login no sistema", description = "Retorna um token JWT para autenticação")

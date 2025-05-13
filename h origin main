@@ -1,0 +1,6 @@
+[33med39232[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;32mfix/lombok-annotations[m[33m, [m[1;32mdev[m[33m)[m fix: adiciona anotações Lombok nas entidades e DTOs
+[33mb519788[m feat: implementa camada de serviço do Medical Record Service
+[33m3c11735[m feat: implementa DTOs e configurações do Medical Record Service
+[33m31538e8[m feat: implementa estrutura base do Medical Record Service - Entidades, repositórios e migrations
+[33md81df40[m feat: implementa serviço de pacientes
+[33m2531b1c[m feat: implementa serviço de registro de usuários
