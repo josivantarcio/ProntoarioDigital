@@ -37,7 +37,7 @@ public class Attachment {
     @Column(nullable = false)
     private String filePath;
 
-    @Column
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     @CreatedDate
@@ -47,4 +47,9 @@ public class Attachment {
     @LastModifiedDate
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+    }
 } 

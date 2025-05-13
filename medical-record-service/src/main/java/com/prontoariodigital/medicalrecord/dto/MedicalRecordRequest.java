@@ -14,13 +14,13 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedicalRecordRequest {
-    @NotNull(message = "ID do paciente é obrigatório")
+    @NotNull(message = "Patient ID is required")
     private UUID patientId;
 
-    @NotNull(message = "ID do médico é obrigatório")
+    @NotNull(message = "Doctor ID is required")
     private UUID doctorId;
 
-    @NotBlank(message = "Queixa principal é obrigatória")
+    @NotBlank(message = "Main complaint is required")
     private String mainComplaint;
 
     private String currentDiseaseHistory;

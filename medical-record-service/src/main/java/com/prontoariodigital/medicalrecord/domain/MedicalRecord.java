@@ -57,9 +57,11 @@ public class MedicalRecord {
     private String evolution;
 
     @OneToMany(mappedBy = "medicalRecord", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
     private List<Attachment> attachments = new ArrayList<>();
 
     @OneToMany(mappedBy = "medicalRecord", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
     private List<Evolution> evolutions = new ArrayList<>();
 
     @CreatedDate
@@ -69,4 +71,15 @@ public class MedicalRecord {
     @LastModifiedDate
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+        updatedAt = LocalDateTime.now();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = LocalDateTime.now();
+    }
 } 
