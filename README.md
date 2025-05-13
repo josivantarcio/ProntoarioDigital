@@ -1,4 +1,6 @@
-# Prontuário Digital 🏥
+# Prontuário Digital
+
+A modern, secure, and efficient digital medical records system built with Spring Boot microservices architecture. Streamlining healthcare documentation while ensuring data privacy and accessibility.
 
 Sistema de Prontuário Digital Hospitalar desenvolvido com Spring Boot 3.2+ e Java 21.
 
